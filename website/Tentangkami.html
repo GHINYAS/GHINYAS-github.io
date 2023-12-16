@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Elegance</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+</head>
+<body>
+
+<div class="w3-top">
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
+  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+</div>
+
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+  <div class="mySlides w3-display-container w3-center">
+    <img src="makan.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">  
+    </div>
+  </div>
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id=">
+    <h2 class="w3-wide">ELEGANCE</h2>
+    <p class="w3-opacity"><i>Selamat datang di Elegance, sebuah persembahan gemerlap keanggunan dalam dunia kuliner. Restoran kami bukan sekadar tempat untuk menikmati hidangan lezat, tetapi juga merupakan perpaduan elegansi dan keindahan yang menciptakan pengalaman kuliner yang luar biasa.
+    </i></p>
+    <p class="w3-justify">
+        Atmosfer yang Memikat:
+        Elegance memanjakan tamu dengan atmosfer yang memikat sejak langkah pertama masuk. Cahaya gemerlap yang lembut memperkuat keanggunan ruangan, menciptakan suasana yang tepat untuk makan malam romantis, pertemuan bisnis yang penting, atau bahkan perayaan bersama orang-orang terkasih.</p>
+    <p class="w3-justify">   
+        Desain yang Berkelas:
+        Desain interior Elegance mencerminkan keanggunan dalam setiap detailnya. Perpaduan warna yang lembut, furnitur yang mewah, dan dekorasi yang dipilih dengan cermat menciptakan ruang yang memberikan kesan mewah dan eksklusif.</p>
+    <p class="w3-justify">    
+        Menu yang Memikat Lidah:
+        Dapur Elegance menawarkan pengalaman kuliner yang tak tertandingi. Setiap hidangan disajikan dengan keterampilan tinggi, menggunakan bahan-bahan pilihan untuk menciptakan kombinasi rasa yang memukau. Dari hidangan pembuka yang menggoda selera hingga pencuci mulut yang memuaskan, setiap menu di Elegance adalah karya seni kuliner yang tak terlupakan.</p>
+    <p class="w3-justify">
+        Pelayanan yang Ramah dan Profesional:
+        Staf kami tidak hanya terlatih dengan baik dalam menyajikan hidangan, tetapi juga memberikan pelayanan yang ramah dan profesional. Kami berkomitmen untuk membuat setiap kunjungan Anda menjadi pengalaman yang menyenangkan dan tak terlupakan.</p>
+    <p class="w3-justify">    
+        Acara Khusus dan Private Dining:
+        Elegance juga menyediakan fasilitas untuk acara khusus dan private dining. Apakah itu pesta ulang tahun, acara perusahaan, atau pernikahan, tim kami siap membantu merencanakan setiap detail agar acara Anda berjalan dengan sempurna.</p>
+    <p class="w3-justify">  
+        Galeri Kuliner di Elegance:
+        Kami percaya bahwa makanan bukan hanya tentang rasa, tetapi juga tentang presentasi. Oleh karena itu, Elegance memiliki galeri kuliner yang memamerkan keindahan setiap hidangan yang kami sajikan. Pengunjung dapat menikmati visual sebelum menikmati setiap kreasi kuliner kami.</p>
+    <p class="w3-justify">        
+        Elegance bukan sekadar restoran; itu adalah destinasi untuk mereka yang menghargai keindahan, keanggunan, dan cita rasa yang istimewa. Datanglah dan nikmatilah gemerlap keanggunan kami, di mana setiap hidangan adalah karya seni yang diciptakan untuk menyentuh hati dan memanjakan lidah.</p>
+    </div>
+  </div>
+</div>
+
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+</footer>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>

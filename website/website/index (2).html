@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Elegance</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+</head>
+<body>
+
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="Tentangkami.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TENTANG KAMI</a>
+    <a href="Menu.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">MENU</a>
+    <a href="contac.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+  <div class="mySlides w3-display-container w3-center">
+    <img src="elegance.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <p><b>&copy; 2023 Elegance. Hak Cipta Dilindungi.</b></p>   
+    </div>
+  </div>
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">ELEGANCE</h2>
+    <p class="w3-opacity"><i>Selamat Datang di Elegance</i></p>
+    <p class="w3-justify"> Kami sangat senang bisa menyambut Anda di tempat kami yang eksklusif ini. Setiap tamu adalah kehormatan bagi kami, dan kami berkomitmen untuk memberikan pengalaman kuliner yang tak terlupakan.
+        Dengan bangga kami hadirkan hidangan-hidangan istimewa dari dapur kami yang dipenuhi dengan kreativitas dan keterampilan. Setiap detail disusun dengan cermat untuk memenuhi standar keunggulan kami.
+        Mohon merasakan kenyamanan dan kehangatan suasana restoran kami. Staf kami yang ramah dan profesional selalu siap membantu Anda dalam memastikan setiap momen di sini menjadi istimewa.
+        Terima kasih telah memilih Elegance sebagai destinasi kuliner Anda. Semoga malam ini memberikan kenangan manis dan cita rasa yang membekas dalam ingatan Anda.
+        Selamat menikmati pengalaman kuliner istimewa.</p>
+    </div>
+  </div>
+</div>
+
+<img src="restoran.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+</footer>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Elegance</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+</head>
+<body>
+
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter">
+      <img src="beef capadocia.jpg" alt="Sandwich" style="width:100%">
+      <h3>Beef Capadocia</h3>
+      <p>IDR 270.000</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="calamancari.jpg" alt="Steak" style="width:100%">
+      <h3>Calamancari</h3>
+      <p>IDR 200.000</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="roll matcha cake.jpg" alt="Cherries" style="width:100%">
+      <h3>Roll Mactha Cake</h3>
+      <p>IDR 150.000</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="crunch malove scallop.jpg" alt="Pasta and Wine" style="width:100%">
+      <h3>Crunch Malove Scallop</h3>
+      <p>IDR 180.000</p>
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="orange spak.jpg" alt="Popsicle" style="width:100%">
+      <h3>Orange Spak</h3>
+      <p>IDR 90.000</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="red sunkiss.jpg" alt="Salmon" style="width:100%">
+      <h3>Red Sunkiss</h3>
+      <p>IDR 90.000</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="lime apricot.jpg" alt="Sandwich" style="width:100%">
+      <h3>Lime Apricot</h3>
+      <p>IDR 60.000</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="fire ocean.jpg" alt="Croissant" style="width:100%">
+      <h3>Fire Ocean</h3>
+      <p>IDR 100.000</p>
+    </div>
+  </div>
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <div><p><b>&copy; 2023 Elegance. Hak Cipta Dilindungi.</b></p>
+  
+  </div>
+</footer>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
